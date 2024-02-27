@@ -22,7 +22,7 @@ spec:
           image: mrstjch/todo-backend
           env:
             - name: DATABASE
-              value: mongodb://admin:password123@mongodb-svc/admin
+              value: mongodb://admin:password123@mongodb-svc/todo
           resources:
             requests:
               cpu: "50m"
