@@ -23,13 +23,13 @@ spec:
           env:
             - name: BACKEND_URL
               value: back-end
-          resources:
-            requests:
-              memory: "50Mi"
-              cpu: "128m"
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+          # resources:
+          #   requests:
+          #     memory: "50Mi"
+          #     cpu: "128m"
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"
           ports:
             - containerPort: 3000
               name: front-end
