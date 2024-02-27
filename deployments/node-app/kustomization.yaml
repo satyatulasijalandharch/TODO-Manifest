@@ -8,11 +8,9 @@ resources:
   - be-ingress.yaml
   - fe-ingress.yaml
   - be-cm.yaml
-  - argo-svc-ingress.yml
 patchesStrategicMerge:
   - be-deploy.yaml
   - fe-deploy.yaml
-  - argo-deploy.yml
 images:
   - name: mrstjch/todo-frontend
     newTag: latest
