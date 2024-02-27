@@ -4,3 +4,12 @@ deployments/node-app/mongo-express.yaml
 .gitattributes
 .gitmodules
 .gitkeep
+
+# Ignore all files and directories except base/apps and deployments/node-app
+/*
+!/base/
+/base/*
+!/base/apps/
+
+/deployments/*
+!/deployments/node-app/
