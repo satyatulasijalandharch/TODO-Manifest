@@ -1,0 +1,6 @@
+deployments/node-app/mongo-express.yaml
+# Git files
+.git
+.gitattributes
+.gitmodules
+.gitkeep
