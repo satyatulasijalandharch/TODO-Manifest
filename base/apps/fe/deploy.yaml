@@ -20,6 +20,9 @@ spec:
       containers:
         - name: front-end
           image: mrstjch/todo-frontend
+          env:
+            - name: BACKEND_URL
+              value: back-end
           resources:
             requests:
               memory: "50Mi"
@@ -28,5 +31,5 @@ spec:
               memory: "128Mi"
               cpu: "500m"
           ports:
-            - containerPort: 80
+            - containerPort: 3000
               name: front-end

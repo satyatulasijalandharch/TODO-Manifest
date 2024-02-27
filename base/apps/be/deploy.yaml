@@ -31,5 +31,5 @@ spec:
               memory: "128Mi"
               cpu: "500m"
           ports:
-            - containerPort: 7770
+            - containerPort: 3001
               name: back-end

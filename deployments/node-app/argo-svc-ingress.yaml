@@ -23,7 +23,7 @@ metadata:
   namespace: argocd
 spec:
   rules:
-  - host: argo.showyrskills.in
+  - host: argo.mrstjch.com
     http:
       paths:
       - path: /
