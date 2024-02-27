@@ -21,7 +21,7 @@ spec:
         - name: back-end
           image: mrstjch/todo-backend
           env:
-            - name: DATABASE
+            - name: MONGODB_URL
               value: mongodb://admin:password123@mongodb-svc/todo
           resources:
             requests:
