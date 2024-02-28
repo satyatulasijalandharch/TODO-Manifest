@@ -18,4 +18,4 @@ spec:
               service:
                 name: back-end-svc
                 port:
-                  number: 3001
+                  number: 80
