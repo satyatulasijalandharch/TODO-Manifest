@@ -18,4 +18,4 @@ spec:
               service:
                 name: front-end-svc
                 port:
-                  number: 443
+                  number: 80
