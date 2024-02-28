@@ -11,4 +11,4 @@ spec:
   ports:
   - name: front-end-svc
     port: 3000
-    targetPort: 443
+    targetPort: 80
