@@ -22,14 +22,7 @@ spec:
           image: mrstjch/todo-backend
           env:
             - name: MONGODB_URL
-              value: mongodb://admin:password123@mongodb-svc/
-          resources:
-            requests:
-              cpu: "200m"
-              memory: "428Mi"
-            limits:
-              memory: "528Mi"
-              cpu: "1000m"
+              value: "mongodb://admin:password123@mongodb-svc/"
           ports:
             - containerPort: 3001
               name: back-end
