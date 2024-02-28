@@ -22,7 +22,7 @@ spec:
           image: mrstjch/todo-frontend
           env:
             - name: BACKEND_URL
-              value: "back-end:3001"
+              value: "https://api.mrstjch.com"
           ports:
             - containerPort: 3000
               name: front-end
