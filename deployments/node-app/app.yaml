@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/satyatulasijalandharch/TODO-Manifest
     path: deployments/node-app
-    targetRevision: k-argo
+    targetRevision: main
     directory:
       recurse: false
       jsonnet: {}
