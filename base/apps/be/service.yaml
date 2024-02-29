@@ -11,5 +11,5 @@ spec:
   ports:
   - name: back-end-svc
     port: 80
-    targetPort: 3002
+    targetPort: 3001
     
