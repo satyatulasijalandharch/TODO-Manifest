@@ -20,9 +20,9 @@ spec:
       containers:
         - name: front-end
           image: mrstjch/todo-frontend
-          # env:
-          #   - name: REACT_APP_BACKEND_URL
-          #     value: "http://api.mrstjch.com"
+          env:
+            - name: REACT_APP_BACKEND_URL
+              value: "http://localhost:3001"
           ports:
             - containerPort: 3000
               name: front-end
