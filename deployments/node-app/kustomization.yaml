@@ -13,6 +13,6 @@ patchesStrategicMerge:
   - fe-deploy.yaml
 images:
   - name: mrstjch/todo-frontend
-    newTag: 1.0.16
+    newTag: 1.0.17
   - name: mrstjch/todo-backend
     newTag: 1.0.14
