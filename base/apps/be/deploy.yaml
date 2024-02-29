@@ -22,7 +22,7 @@ spec:
           image: mrstjch/todo-backend
           env:
             - name: MONGODB_URL
-              value: "mongodb+srv://satya:satya123@todo.kreblnz.mongodb.net/"
+              value: "mongodb://admin:password123@mongodb-svc/"
           ports:
             - containerPort: 3001
               name: back-end
