@@ -15,4 +15,4 @@ images:
   - name: mrstjch/todo-frontend
     newTag: 1.0.11
   - name: mrstjch/todo-backend
-    newTag: 1.0.9
+    newTag: 1.0.10
