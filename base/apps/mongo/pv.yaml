@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/home/cx-sami/Codelogicx/D/SAMI/Projects/gitops/base/apps/mongo/data"
+    path: "/home/ubuntu/mongodb/data"
