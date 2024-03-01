@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/home/ubuntu/mongodb/data"
+    path: "/home/ubuntu/TODO/base/apps/mongo/data"
