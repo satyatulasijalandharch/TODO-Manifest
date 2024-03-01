@@ -1,5 +1,4 @@
 apiVersion: apps/v1
-kind: ConfigMap
-# kind: Deployment
+kind: Deployment
 metadata:
   name: back-end
