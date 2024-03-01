@@ -10,6 +10,6 @@ spec:
     app: back-end
   ports:
   - name: back-end-svc
+    protocol: TCP
     port: 80
     targetPort: 3001
-    
