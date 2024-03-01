@@ -9,6 +9,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
+      revision: 2
       maxSurge: 1
       maxUnavailable: 0
   replicas: 1
@@ -23,7 +24,7 @@ spec:
           env:
             - name: REACT_APP_BACKEND_URL
               # value: "https://api.mrstjch.com"
-              value: "http://back-end-svc"
+              value: "http://backs-end-svc"
           ports:
             - containerPort: 3000
               name: front-end
