@@ -22,7 +22,8 @@ spec:
           image: mrstjch/todo-frontend
           env:
             - name: REACT_APP_BACKEND_URL
-              value: "https://api.mrstjch.com"
+              # value: "https://api.mrstjch.com"
+              value: "http://back-end-svc"
           ports:
             - containerPort: 3000
               name: front-end
