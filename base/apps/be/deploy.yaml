@@ -23,6 +23,8 @@ spec:
           env:
             - name: MONGODB_URL
               value: "mongodb://admin:password123@mongodb-svc/"
+            - name: PORT
+              value: "3001"
           ports:
             - containerPort: 3001
               name: back-end

@@ -23,6 +23,8 @@ spec:
           env:
             - name: REACT_APP_BACKEND_URL
               value: "http://back-end-svc"
+            - name: PORT
+              value: "3000"
           ports:
             - containerPort: 3000
               name: front-end
