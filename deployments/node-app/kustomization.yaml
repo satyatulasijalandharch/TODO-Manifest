@@ -1,6 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 namespace: node-app
-# commonLabels:
-#   app: node-app
+
 resources:
   - ../../base/apps/be
   - ../../base/apps/fe
@@ -8,9 +9,17 @@ resources:
   - be-ingress.yaml
   - fe-ingress.yaml
   - be-cm.yaml
-patchesStrategicMerge:
-  - be-deploy.yaml
-  - fe-deploy.yaml
+
+patches:
+  - path: be-deploy.yaml
+    target:
+      kind: Deployment
+      name: backend
+  - path: fe-deploy.yaml
+    target:
+      kind: Deployment
+      name: frontend
+
 images:
   - name: mrstjch/todo-frontend
     newTag: 1.0.10
