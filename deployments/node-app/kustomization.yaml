@@ -4,6 +4,9 @@ namespace: node-app
 
 resources:
   - ../../base/apps/be
+  - ../../base/apps/be/configmap.yaml  # Corrected path to the ConfigMap file
+  - ../../base/apps/be/deploy.yaml
+  - ../../base/apps/be/service.yaml
   - ../../base/apps/fe
   - ../../base/apps/mongo
   - be-ingress.yaml
