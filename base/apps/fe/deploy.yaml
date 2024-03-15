@@ -22,9 +22,9 @@ spec:
           image: mrstjch/todo-frontend
           env:
             - name: REACT_APP_BACKEND_URL
-              value: "http://back-end-svc:3001"
+              value: "http://back-end:3001"
             - name: PORT
-              value: "3001"
+              value: "3000"
           ports:
             - containerPort: 3000
               name: front-end
