@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: api.mrstjch.com
+    - host: api.mrstjch.local
       http:
         paths:
           - pathType: Prefix

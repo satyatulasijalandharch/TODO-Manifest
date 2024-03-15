@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: todo.mrstjch.com
+    - host: todo.mrstjch.local
       http:
         paths:
           - pathType: Prefix
