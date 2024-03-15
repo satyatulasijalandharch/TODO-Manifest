@@ -1,0 +1,18 @@
+namespace: node-app
+# commonLabels:
+#   app: node-app
+resources:
+  - ../../base/apps/be
+  - ../../base/apps/fe
+  - ../../base/apps/mongo
+  - be-ingress.yaml
+  - fe-ingress.yaml
+  - be-cm.yaml
+patchesStrategicMerge:
+  - be-deploy.yaml
+  - fe-deploy.yaml
+images:
+  - name: mrstjch/todo-frontend
+    newTag: 1.0.11
+  - name: mrstjch/todo-backend
+    newTag: 1.0.3

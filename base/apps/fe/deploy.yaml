@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end
+spec:
+  selector:
+    matchLabels:
+      app: front-end
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+        - name: front-end
+          image: mrstjch/todo-frontend
+          env:
+            - name: REACT_APP_BACKEND_URL
+              value: "http://api.mrstjch.local"
+            - name: PORT
+              value: "3000"
+          ports:
+            - containerPort: 3000
+              name: front-end
