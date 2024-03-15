@@ -3,28 +3,35 @@ kind: Deployment
 metadata:
   name: back-end
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: back-end
+  template:
+    metadata:
+      labels:
+        app: back-end
   strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 0
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: back-end
     spec:
       containers:
         - name: back-end
           image: mrstjch/todo-backend
-          env:
-            - name: MONGODB_URL
-              value: "mongodb://admin:password123@mongodb-svc/"
-            - name: PORT
-              value: "3001"
           ports:
             - containerPort: 3001
-              name: back-end
+          env:
+            - name: MONGODB_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-env-config
+                  key: MONGODB_URL
+          envFrom:
+            - configMapRef:
+                name: backend-config
+            - configMapRef:
+                name: backend-env-config
+            - secretRef:
+                name: backend-secrets
