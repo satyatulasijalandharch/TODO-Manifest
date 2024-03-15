@@ -5,10 +5,9 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
   capacity:
     storage: 50Mi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/home/ubuntu/TODO/base/apps/mongo/data"
+    path: /mnt/data

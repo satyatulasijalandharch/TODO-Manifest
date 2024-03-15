@@ -1,28 +1,16 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
 namespace: node-app
-
+# commonLabels:
+#   app: node-app
 resources:
   - ../../base/apps/be
-  - ../../base/apps/be/configmap.yaml  # Corrected path to the ConfigMap file
-  - ../../base/apps/be/deploy.yaml
-  - ../../base/apps/be/service.yaml
   - ../../base/apps/fe
   - ../../base/apps/mongo
   - be-ingress.yaml
   - fe-ingress.yaml
   - be-cm.yaml
-
-patches:
-  - path: be-deploy.yaml
-    target:
-      kind: Deployment
-      name: backend
-  - path: fe-deploy.yaml
-    target:
-      kind: Deployment
-      name: frontend
-
+patchesStrategicMerge:
+  - be-deploy.yaml
+  - fe-deploy.yaml
 images:
   - name: mrstjch/todo-frontend
     newTag: 1.0.10

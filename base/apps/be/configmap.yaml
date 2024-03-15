@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: backend-config
-data:
-  DATABASE_NAME: todo
-  DATABASE_HOST: mongodb-svc
-  DATABASE_PORT: "27017"
-  # Add other backend configuration data as needed
