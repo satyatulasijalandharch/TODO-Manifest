@@ -8,6 +8,7 @@ spec:
   capacity:
     storage: 50Mi
   accessModes:
-    - ReadWriteMany
+  - ReadWriteMany
   hostPath:
     path: /mnt/data
+  persistentVolumeReclaimPolicy: Retain  # Not recommended for production
