@@ -1,11 +1,10 @@
-# Persistent Volume
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: mongo-volume-claim
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce  # Adjust to ReadWriteMany if needed for your use case
   resources:
     requests:
-      storage: 50Mi
+      storage: 1Gi  # Adjust storage size based on your requirements
